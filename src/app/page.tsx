@@ -2,6 +2,10 @@ import Link from "next/link";
 import { prisma } from "@/utils/db";
 import StatusBadge from "@/components/StatusBadge";
 
+
+export const dynamic = "force-dynamic";
+// export const revalidate = 10;
+
 const HomePage = async () => {
   const tasks = await prisma.task.findMany();
 
